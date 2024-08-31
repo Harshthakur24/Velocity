@@ -18,7 +18,7 @@ import {
 import { useToast } from "./ui/use-toast";
 
 export function UpdateProfile(userId: { userId: string }) {
-  const [name, setName] = useState("Nikhil Sahni");
+  const [name, setName] = useState("Harsh Thakur");
   const [username, setUsername] = useState("@nikhil_sahni");
   const [collegeName, setCollegeName] = useState("");
   const [currentSemester, setCurrentSemester] = useState("");

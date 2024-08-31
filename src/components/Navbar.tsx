@@ -98,7 +98,7 @@ const Navbar = () => {
                             About Me
                           </div>
                           <p className="text-sm leading-tight text-gray-300 dark:text-gray-600">
-                            Hello I am Nikhil Sahni. I am a Full Stack Developer
+                            Hello I am Harsh Thakur. I am a Full Stack Developer
                             and currently pursuing computer science. You can
                             find me on github and twitter/x ,I have provided all
                             the links below.
