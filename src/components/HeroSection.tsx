@@ -21,7 +21,7 @@ export const Hero = () => {
 
   return (
     <section className="container flex flex-col items-center justify-center min-h-screen py-8 md:py-18 space-y-12 animate-fadeIn w-full">
-      <div className="text-center space-y-7">
+      <div className="text-center space-y-8">
         <main className="text-4xl md:text-5xl font-bold">
           <h1 className="flex">
             <div>
