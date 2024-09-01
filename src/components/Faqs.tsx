@@ -20,7 +20,7 @@ const FAQList: FAQProps[] = [
   {
     question: "what features does i get here?",
     answer:
-      "You will get free notes ,pyqs and syllabus depending upon your subjects in your semester",
+      "You will get free notes ,pyqs and Syllabus depending upon your subjects in your semester",
     value: "item-2",
   },
   {

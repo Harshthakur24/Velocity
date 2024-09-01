@@ -20,11 +20,12 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-
+import { useRouter } from "next/navigation";
 import { User, Settings, Menu, User2 } from "lucide-react";
 import { Button } from "./ui/button";
 
 const Navbar = () => {
+  const router = useRouter();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
 
   return (
@@ -38,9 +39,12 @@ const Navbar = () => {
             height={50}
             className="rounded-full"
           />
-          <span className="text-2xl font-bold tracking-wide text-foreground">
-            StudyPoint
-          </span>
+          <button
+            className="text-2xl font-bold tracking-wide text-foreground"
+            onClick={() => router.push("home")}
+          >
+            StudyArena
+          </button>
         </div>
 
         {/* Desktop Menu */}
@@ -124,9 +128,9 @@ const Navbar = () => {
                 </Link>
               </NavigationMenuItem>
               <NavigationMenuItem>
-                <Link href="/syllabus" passHref legacyBehavior>
+                <Link href="/quiz" passHref legacyBehavior>
                   <NavigationMenuLink className="font-medium text-foreground transition duration-300 hover:text-gray-300">
-                    Syllabus/lab file
+                    Quiz
                   </NavigationMenuLink>
                 </Link>
               </NavigationMenuItem>
@@ -185,7 +189,7 @@ const Navbar = () => {
                   </Link>
                 </NavigationMenuItem>
                 <NavigationMenuItem>
-                  <Link href="/syllabus" passHref legacyBehavior>
+                  <Link href="/" passHref legacyBehavior>
                     <NavigationMenuLink className="font-medium text-foreground transition duration-300 hover:text-gray-300">
                       Syllabus/Lab Files
                     </NavigationMenuLink>

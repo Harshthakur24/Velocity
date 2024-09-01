@@ -12,9 +12,9 @@ const fontSans = FontSans({
 });
 
 export const metadata = {
-  title: "Study Point",
+  title: "Study Arena",
   description:
-    "App designed for study materials and exam resources for college like notes,pyqs and syllabus,lab manuals/files and many more and also has contact us and feedback form for any query and feedback",
+    "Study Arena is an innovative platform designed to be the ultimate hub for students seeking academic resources and community engagement.",
 };
 
 export default function RootLayout({

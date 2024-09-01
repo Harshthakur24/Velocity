@@ -23,7 +23,7 @@ const features: FeatureProps[] = [
   {
     title: "Study materials",
     description:
-      "we provide study materials for the students of our college with notes, pyqs and syllabus..anybody can learn from here and use it for free",
+      "we provide study materials for the students of our college with notes, pyqs and Syllabus..anybody can learn from here and use it for free",
     image: image,
   },
   {

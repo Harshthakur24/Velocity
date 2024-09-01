@@ -39,7 +39,7 @@ const subjects = [
 
 const categories = [
   { value: "notes", label: "Notes" },
-  { value: "syllabus", label: "Syllabus" },
+  { value: "Syllabus", label: "Syllabus" },
   { value: "pyq", label: "Previous Year Questions (PYQ)" },
 ];
 

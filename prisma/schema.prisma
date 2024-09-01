@@ -92,7 +92,7 @@ model Document {
 enum DocumentCategory {
   PYQ
   NOTES
-  SYLLABUS
+  Syllabus
 }
 
 model ContactUs {

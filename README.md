@@ -2,11 +2,11 @@
 
 ## Overview
 
-_Study Point_ is a full-stack e-learning platform designed to assist college students by providing a variety of study materials including notes, previous year question papers (PYQs), syllabus, tutorials, lab files, and more. The platform also features a discussion forum where users can ask questions and receive answers, enhancing collaborative learning.
+_Study Point_ is a full-stack e-learning platform designed to assist college students by providing a variety of study materials including notes, previous year question papers (PYQs), Syllabus, tutorials, lab files, and more. The platform also features a discussion forum where users can ask questions and receive answers, enhancing collaborative learning.
 
 ## Features
 
-- _Study Materials_: Access to notes, PYQs, syllabus, tutorials, lab files, and more.
+- _Study Materials_: Access to notes, PYQs, Syllabus, tutorials, lab files, and more.
 - _Discussion Forum_: Post questions and provide answers to fellow students.
 - _Search Functionality_: Quickly find the study materials you need.
 - _User Profiles_: Update profile information easily.

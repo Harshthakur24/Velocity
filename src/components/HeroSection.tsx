@@ -1,10 +1,10 @@
-// components/Hero.js
 "use client";
 import { AlertHero } from "./Alert";
 import { HeroCards } from "./HeroCard";
 import SearchBar from "./SearchBar";
 import { Button } from "./ui/button";
 import { useRouter } from "next/navigation";
+import { TypeAnimation } from "react-type-animation";
 import Link from "next/link";
 import {
   Card,
@@ -20,57 +20,55 @@ export const Hero = () => {
   const router = useRouter();
 
   return (
-    <section className="container py-12 md:py-24 space-y-12 animate-fadeIn">
-      <div className="grid lg:grid-cols-2 gap-8 place-items-center">
-        <div className="text-center lg:text-start space-y-6">
-          <main className="text-4xl md:text-5xl font-bold">
-            <h1 className="inline">
-              <span className="inline bg-gradient-to-r from-[#F596D3] to-[#D247BF] text-transparent bg-clip-text">
-                Exam and Study
+    <section className="container flex flex-col items-center justify-center min-h-screen py-8 md:py-18 space-y-12 animate-fadeIn w-full">
+      <div className="text-center space-y-7">
+        <main className="text-4xl md:text-5xl font-bold">
+          <h1 className="flex">
+            <div>
+              <span className="text-6.5xl inline bg-gradient-to-r from-[#e74e4e] to-[#764ede] text-transparent bg-clip-text">
+                Empower Your
               </span>{" "}
-              Resources
-            </h1>{" "}
-            for{" "}
+              <span className="text-6.5xl inline bg-gradient-to-r from-[#764ede] to-[#eb4fd6] text-transparent bg-clip-text">
+                <TypeAnimation
+                  sequence={["Learning", 4000, "Coding", 4000]}
+                  wrapper="span"
+                  speed={20}
+                  repeat={Infinity}
+                />
+                <span className="text-6.5xl">Journey</span>
+              </span>
+            </div>
+          </h1>{" "}
+          <div>
+            <span className="text-6.5xl inline bg-gradient-to-r from-[#de4ec8] to-[#6a70ed] text-transparent bg-clip-text">
+              with
+            </span>{" "}
             <h2 className="inline">
-              <span className="inline bg-gradient-to-r from-[#61DAFB] via-[#1fc0f1] to-[#03a3d7] text-transparent bg-clip-text">
-                College
+              <span className="text-6.5xl inline bg-gradient-to-r from-[#6a70ed] to-[#6cd30b] text-transparent bg-clip-text">
+                Study Arena
               </span>{" "}
-              Students
             </h2>
-          </main>
-          <p className="text-lg text-muted-foreground md:w-10/12 mx-auto lg:mx-0">
-            Find study materials and other resources like notes, pyqs, syllabus,
-            lab files, tutorials, etc. for your college
-          </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start space-y-4 sm:space-y-0 sm:space-x-4">
-            <Button
-              onClick={() => router.push("contact-us")}
-              variant="default"
-              className="w-full sm:w-auto"
-              size="lg"
-            >
-              Contact us
-            </Button>
-            <SearchBar className="w-full sm:w-auto" />
           </div>
-        </div>
-        <div className="w-full max-w-md">
-          <Card className="bg-card">
-            <CardHeader>
-              <CardTitle>Study Resources</CardTitle>
-              <CardDescription>Explore our collection</CardDescription>
-            </CardHeader>
-            <CardContent>
-              <HeroCards />
-            </CardContent>
-          </Card>
+        </main>
+        <p className="text-lg text-muted-foreground md:w-10/12 mx-auto">
+          Join Study Arena today and transform your study experience with the
+          resources and community support you need to excel.
+        </p>
+        <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+          <Button
+            onClick={() => router.push("contact-us")}
+            variant="default"
+            className="w-full sm:w-auto transform transition duration-300 hover:scale-110 rounded-full px-6"
+            size="lg"
+          >
+            <span className="font-semibold">Contact us</span>
+          </Button>
+          <SearchBar className="w-full sm:w-auto transform transition duration-300 hover:scale-110 rounded px-6" />
         </div>
       </div>
 
-      <div className="space-y-8">
-        <h3 className="text-3xl font-bold text-center">
-          Join Our Vibrant Community
-        </h3>
+      <div className="space-y-8 text-center">
+        <h3 className="text-4xl font-bold mt-8">Join Our Vibrant Community</h3>
         <div className="grid md:grid-cols-3 gap-6">
           <Card className="bg-card hover:shadow-lg transition-shadow">
             <CardHeader>
