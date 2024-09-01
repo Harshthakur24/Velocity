@@ -26,11 +26,20 @@ export const Hero = () => {
           <h1 className="flex">
             <div>
               <span className="text-4xl lg:text-6.5xl md:text-5xl sm:text-3xl inline bg-gradient-to-r from-[#e74e4e] to-[#764ede] text-transparent bg-clip-text">
-                Empower Your
+                Accelarate Your
               </span>{" "}
               <span className="text-4xl lg:text-6.5xl md:text-5xl sm:text-3xl inline bg-gradient-to-r from-[#764ede] to-[#eb4fd6] text-transparent bg-clip-text">
                 <TypeAnimation
-                  sequence={["Learning", 4000, "Coding", 4000, "Carrier", 4000]}
+                  sequence={[
+                    "Growth",
+                    4000,
+                    "Coding",
+                    4000,
+                    "Carrier",
+                    4000,
+                    "Skill",
+                    4000,
+                  ]}
                   wrapper="span"
                   speed={20}
                   repeat={Infinity}
@@ -43,18 +52,19 @@ export const Hero = () => {
           </h1>{" "}
           <div>
             <span className="text-4xl lg:text-6.5xl md:text-5xl sm:text-3xl inline bg-gradient-to-r from-[#de4ec8] to-[#6a70ed] text-transparent bg-clip-text">
-              with
+              Fueled
             </span>{" "}
             <h2 className="inline">
               <span className="text-4xl lg:text-6.5xl md:text-5xl sm:text-3xl inline bg-gradient-to-r from-[#6a70ed] to-[#6cd30b] text-transparent bg-clip-text">
-                the Velocity
+                by Velocity
               </span>{" "}
             </h2>
           </div>
         </main>
         <p className="text-lg text-muted-foreground md:w-10/12 mx-auto">
-          Join Velocity today and transform your study experience with the
-          resources and community support you need to excel in your Carrier.
+          Join Velocity today to revolutionize your skill development and growth
+          with the resources and community support needed to excel in your
+          career.
         </p>
         <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4">
           <Button

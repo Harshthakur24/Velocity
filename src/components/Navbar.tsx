@@ -43,7 +43,7 @@ const Navbar = () => {
             className="text-2xl font-bold tracking-wide text-foreground"
             onClick={() => router.push("home")}
           >
-            StudyArena
+            Velocity
           </button>
         </div>
 
