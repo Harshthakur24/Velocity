@@ -57,7 +57,7 @@ const Navbar = () => {
                 </NavigationMenuTrigger>
                 <NavigationMenuContent>
                   <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr] bg-gray-800 dark:bg-white rounded-lg shadow-lg">
-                    <li className="row-span-3">
+                    <li className="">
                       <NavigationMenuLink asChild>
                         <Link
                           href="/getting-started"
@@ -71,14 +71,6 @@ const Navbar = () => {
                             tools and resources that empower students to build
                             their skills, connect with industry professionals,
                             and navigate their career paths with confidence.
-                            Whether it&aspos;s through personalized learning
-                            paths, industry-relevant courses, or networking
-                            opportunities, Velocity is committed to helping
-                            students achieve their full potential. By focusing
-                            on both technical and soft skills, Velocity ensures
-                            that users are not only prepared for the challenges
-                            of today&aspos;s job market but are also equipped to
-                            excel in their future careers.
                           </p>
                         </Link>
                       </NavigationMenuLink>
@@ -87,10 +79,14 @@ const Navbar = () => {
                 </NavigationMenuContent>
               </NavigationMenuItem>
               <NavigationMenuItem>
-                <NavigationMenuTrigger></NavigationMenuTrigger>
+                <NavigationMenuTrigger>
+                  <span className="font-medium text-foreground transition duration-300 hover:text-gray-300">
+                    About Me
+                  </span>
+                </NavigationMenuTrigger>
                 <NavigationMenuContent>
                   <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr] bg-gray-800 dark:bg-white rounded-lg shadow-lg">
-                    <li className="row-span-3">
+                    <li className="">
                       <NavigationMenuLink asChild>
                         <Link
                           href="/about-me"
