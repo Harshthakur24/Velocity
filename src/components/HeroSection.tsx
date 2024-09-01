@@ -30,7 +30,7 @@ export const Hero = () => {
               </span>{" "}
               <span className="text-4xl lg:text-6.5xl md:text-5xl sm:text-3xl inline bg-gradient-to-r from-[#764ede] to-[#eb4fd6] text-transparent bg-clip-text">
                 <TypeAnimation
-                  sequence={["Learning", 4000, "Coding", 4000]}
+                  sequence={["Learning", 4000, "Coding", 4000, "Carrier", 4000]}
                   wrapper="span"
                   speed={20}
                   repeat={Infinity}
