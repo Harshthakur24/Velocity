@@ -1,4 +1,4 @@
-# [Study Point](https://study-point-nine.vercel.app/)
+# [](/)
 
 ## Overview
 
