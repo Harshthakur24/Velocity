@@ -16,17 +16,15 @@ interface TestimonialProps {
 
 const testimonials: TestimonialProps[] = [
   {
-    image:
-      "https://pbs.twimg.com/profile_images/1764561367766622208/DkHdZMiv_400x400.jpg",
-    name: "Vishal",
-    userName: "@vishal_sharma",
+    image: "",
+    name: "Vibhor Sharma",
+    userName: "@vibhor_420",
     comment: "This website is awesome!",
   },
   {
-    image:
-      "https://pbs.twimg.com/profile_images/1684137528184705025/p6nG7b5h_400x400.jpg",
-    name: "Harsh Thakur",
-    userName: "@harsh_thakur69",
+    image: "",
+    name: "Vansh Nagpal",
+    userName: "@vansh_nagpal69",
     comment: "It saves a lot of time and i can get study resources from here.",
   },
 
