@@ -52,7 +52,7 @@ const Navbar = () => {
               <NavigationMenuItem>
                 <NavigationMenuTrigger>
                   <span className="font-medium text-foreground transition duration-300 hover:text-gray-300">
-                    Getting Started
+                    What is Velocity?
                   </span>
                 </NavigationMenuTrigger>
                 <NavigationMenuContent>
@@ -61,19 +61,24 @@ const Navbar = () => {
                       <NavigationMenuLink asChild>
                         <Link
                           href="/getting-started"
-                          className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-gray-700 to-gray-600 dark:from-gray-100 dark:to-gray-200 p-6 no-underline outline-none focus:shadow-md"
+                          className="flex h-full w-full select-none flex-col justify-end rounded-lg bg-gradient-to-b from-gray-800 to-gray-700 dark:from-gray-200 dark:to-gray-300 p-6 no-underline outline-none shadow-lg transition-transform transform hover:scale-105 focus:shadow-xl"
                         >
-                          <div className="mb-2 mt-4 text-lg font-medium text-white dark:text-gray-800">
-                            Getting Started
-                          </div>
-                          <p className="text-sm leading-tight text-gray-300 dark:text-gray-600">
-                            Welcome to StudyPoint .. Explore pyqs notes and
-                            other sections to see study materials..
-                          </p>
-                          <p className="text-sm leading-tight text-gray-300 dark:text-gray-600">
-                            Also you can fill contact us form to get more
-                            details and provide us your feedback and anything
-                            else.
+                          <p className="text-sm leading-relaxed text-gray-300 dark:text-gray-700">
+                            Velocity is an innovative platform designed to
+                            accelerate the career growth of engineering
+                            students. Tailored to the unique needs of aspiring
+                            engineers, Velocity offers a comprehensive suite of
+                            tools and resources that empower students to build
+                            their skills, connect with industry professionals,
+                            and navigate their career paths with confidence.
+                            Whether it&aspos;s through personalized learning
+                            paths, industry-relevant courses, or networking
+                            opportunities, Velocity is committed to helping
+                            students achieve their full potential. By focusing
+                            on both technical and soft skills, Velocity ensures
+                            that users are not only prepared for the challenges
+                            of today&aspos;s job market but are also equipped to
+                            excel in their future careers.
                           </p>
                         </Link>
                       </NavigationMenuLink>
@@ -82,28 +87,23 @@ const Navbar = () => {
                 </NavigationMenuContent>
               </NavigationMenuItem>
               <NavigationMenuItem>
-                <NavigationMenuTrigger>
-                  <span className="font-medium text-foreground transition duration-300 hover:text-gray-300">
-                    About Me
-                  </span>
-                </NavigationMenuTrigger>
+                <NavigationMenuTrigger></NavigationMenuTrigger>
                 <NavigationMenuContent>
                   <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr] bg-gray-800 dark:bg-white rounded-lg shadow-lg">
                     <li className="row-span-3">
                       <NavigationMenuLink asChild>
                         <Link
                           href="/about-me"
-                          className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-gray-700 to-gray-600 dark:from-gray-100 dark:to-gray-200 p-6 no-underline outline-none focus:shadow-md"
+                          className="flex h-full w-full select-none flex-col justify-end rounded-lg bg-gradient-to-b from-gray-800 to-gray-700 dark:from-gray-200 dark:to-gray-300 p-6 no-underline outline-none shadow-lg transition-transform transform hover:scale-105 focus:shadow-xl"
                         >
-                          ``
-                          <div className="mb-2 mt-4 text-lg font-medium text-white dark:text-gray-800">
+                          <div className="mb-3 mt-5 text-xl font-semibold text-white dark:text-gray-900">
                             About Me
                           </div>
-                          <p className="text-sm leading-tight text-gray-300 dark:text-gray-600">
-                            Hello I am Harsh Thakur. I am a Full Stack Developer
-                            and currently pursuing computer science. You can
-                            find me on github and twitter/x ,I have provided all
-                            the links below.
+                          <p className="text-sm leading-relaxed text-gray-300 dark:text-gray-700">
+                            Hello, I am Harsh Thakur. I am a Full Stack
+                            Developer currently pursuing Computer Science. You
+                            can find me on GitHub and Twitter/X. I have provided
+                            all the links below.
                           </p>
                         </Link>
                       </NavigationMenuLink>
