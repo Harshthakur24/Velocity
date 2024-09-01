@@ -88,7 +88,8 @@ export function UpdateProfile(userId: { userId: string }) {
             </SheetTitle>
             <SheetDescription className="text-center mt-2">
               <span className="bg-gradient-to-r from-primary/60 to-primary text-transparent bg-clip-text">
-                Make changes to your profile here. Click save when you're done.
+                Make changes to your profile here. Click save when you&aspos;re
+                done.
               </span>
             </SheetDescription>
           </SheetHeader>
