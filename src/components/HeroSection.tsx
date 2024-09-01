@@ -54,7 +54,7 @@ export const Hero = () => {
         </main>
         <p className="text-lg text-muted-foreground md:w-10/12 mx-auto">
           Join Velocity today and transform your study experience with the
-          resources and community support you need to excel.
+          resources and community support you need to excel in your Carrier.
         </p>
         <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4">
           <Button
