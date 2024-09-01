@@ -18,7 +18,7 @@ const testimonials: TestimonialProps[] = [
   {
     image:
       "https://pbs.twimg.com/profile_images/1764561367766622208/DkHdZMiv_400x400.jpg",
-    name: "Vishal Sharma",
+    name: "Vishal",
     userName: "@vishal_sharma",
     comment: "This website is awesome!",
   },
