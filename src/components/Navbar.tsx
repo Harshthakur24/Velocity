@@ -35,7 +35,7 @@ const Navbar = () => {
           <button
             className="text-2xl font-bold tracking-wide py-2 px-4 rounded-md transition-colors"
             style={{
-              background: "linear-gradient(to right, #9b59b6, #ad48f1)",
+              background: "linear-gradient(to right, #6a70ed, #de4ec8)",
               WebkitBackgroundClip: "text",
               WebkitTextFillColor: "transparent",
             }}
