@@ -46,7 +46,7 @@ const Navbar = () => {
         </div>
 
         {/* Desktop Menu */}
-        <div className="hidden md:flex space-x-6">
+        <div className="hidden md:flex space-x-7">
           <NavigationMenu>
             <NavigationMenuList className="flex space-x-6">
               <NavigationMenuItem>
@@ -101,9 +101,9 @@ const Navbar = () => {
                           </div>
                           <p className="text-sm leading-relaxed text-gray-300 dark:text-gray-700">
                             Hello, I am Harsh Thakur. I am a Full Stack
-                            Developer currently pursuing Computer Science. You
-                            can find me on GitHub and Twitter/X. I have provided
-                            all the links below.
+                            Developer currently pursuing my major in Computer
+                            Science Engineering. You can find me on GitHub and
+                            Twitter/X. I have provided all the links below.
                           </p>
                         </Link>
                       </NavigationMenuLink>
