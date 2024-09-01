@@ -35,7 +35,7 @@ export const Hero = () => {
                     4000,
                     "Coding",
                     4000,
-                    "Carrier",
+                    "Career",
                     4000,
                     "Skill",
                     4000,
