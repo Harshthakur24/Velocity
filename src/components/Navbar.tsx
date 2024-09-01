@@ -33,7 +33,12 @@ const Navbar = () => {
       <div className="container mx-auto flex max-w-7xl items-center justify-between p-4">
         <div className="flex items-center space-x-4">
           <button
-            className="text-2xl font-bold tracking-wide text-white bg-gradient-to-r from-purple-500 to-violet-500 hover:from-violet-500 hover:to-purple-500 py-2 px-4 rounded-md transition-colors"
+            className="text-2xl font-bold tracking-wide py-2 px-4 rounded-md transition-colors"
+            style={{
+              background: "linear-gradient(to right, #9b59b6, #8e44ad)",
+              WebkitBackgroundClip: "text",
+              WebkitTextFillColor: "transparent",
+            }}
             onClick={() => router.push("home")}
           >
             Velocity
