@@ -25,26 +25,28 @@ export const Hero = () => {
         <main className="text-4xl md:text-5xl font-bold">
           <h1 className="flex">
             <div>
-              <span className="text-6.5xl inline bg-gradient-to-r from-[#e74e4e] to-[#764ede] text-transparent bg-clip-text">
+              <span className="text-4xl lg:text-6.5xl md:text-5xl sm:text-3xl inline bg-gradient-to-r from-[#e74e4e] to-[#764ede] text-transparent bg-clip-text">
                 Empower Your
               </span>{" "}
-              <span className="text-6.5xl inline bg-gradient-to-r from-[#764ede] to-[#eb4fd6] text-transparent bg-clip-text">
+              <span className="text-4xl lg:text-6.5xl md:text-5xl sm:text-3xl inline bg-gradient-to-r from-[#764ede] to-[#eb4fd6] text-transparent bg-clip-text">
                 <TypeAnimation
                   sequence={["Learning", 4000, "Coding", 4000]}
                   wrapper="span"
                   speed={20}
                   repeat={Infinity}
                 />
-                <span className="text-6.5xl">Journey</span>
+                <span className="text-4xl lg:text-6.5xl md:text-5xl sm:text-3xl">
+                  Journey
+                </span>
               </span>
             </div>
           </h1>{" "}
           <div>
-            <span className="text-6.5xl inline bg-gradient-to-r from-[#de4ec8] to-[#6a70ed] text-transparent bg-clip-text">
+            <span className="text-4xl lg:text-6.5xl md:text-5xl sm:text-3xl inline bg-gradient-to-r from-[#de4ec8] to-[#6a70ed] text-transparent bg-clip-text">
               with
             </span>{" "}
             <h2 className="inline">
-              <span className="text-6.5xl inline bg-gradient-to-r from-[#6a70ed] to-[#6cd30b] text-transparent bg-clip-text">
+              <span className="text-4xl lg:text-6.5xl md:text-5xl sm:text-3xl inline bg-gradient-to-r from-[#6a70ed] to-[#6cd30b] text-transparent bg-clip-text">
                 Study Arena
               </span>{" "}
             </h2>
@@ -68,7 +70,7 @@ export const Hero = () => {
       </div>
 
       <div className="space-y-8 text-center">
-        <h3 className="text-4xl font-bold mt-8">Join Our Vibrant Community</h3>
+        <h3 className="text-5xl font-bold mt-8">Join Our Vibrant Community</h3>
         <div className="grid md:grid-cols-3 gap-6">
           <Card className="bg-card hover:shadow-lg transition-shadow">
             <CardHeader>
