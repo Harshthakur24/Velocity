@@ -19,7 +19,7 @@ export const Newsletter = () => {
           </span>
         </h3>
         <p className="text-xl text-muted-foreground text-center mt-4 mb-8">
-          Subscribe here to get our latest updates and news
+          Subscribe here to join our community and meet amazing people like you.
         </p>
 
         <form
