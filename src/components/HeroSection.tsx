@@ -47,13 +47,13 @@ export const Hero = () => {
             </span>{" "}
             <h2 className="inline">
               <span className="text-4xl lg:text-6.5xl md:text-5xl sm:text-3xl inline bg-gradient-to-r from-[#6a70ed] to-[#6cd30b] text-transparent bg-clip-text">
-                Study Arena
+                the Velocity
               </span>{" "}
             </h2>
           </div>
         </main>
         <p className="text-lg text-muted-foreground md:w-10/12 mx-auto">
-          Join Study Arena today and transform your study experience with the
+          Join Velocity today and transform your study experience with the
           resources and community support you need to excel.
         </p>
         <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4">

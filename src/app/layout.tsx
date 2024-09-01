@@ -12,9 +12,9 @@ const fontSans = FontSans({
 });
 
 export const metadata = {
-  title: "Study Arena",
+  title: "Velocity",
   description:
-    "Study Arena is an innovative platform designed to be the ultimate hub for students seeking academic resources and community engagement.",
+    "Velocity is an innovative platform designed to be the ultimate hub for students seeking academic resources and community engagement.",
 };
 
 export default function RootLayout({
