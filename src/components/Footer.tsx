@@ -30,7 +30,7 @@ export const Footer = ({ className }: { className?: string }) => {
             className="font-bold text-xl flex"
           >
             <LogoIcon />
-            StudyPoint
+            Velocity
           </a>
         </div>
 

@@ -29,7 +29,7 @@ const AppBar = () => {
             className="rounded-full"
           />
           <span className="text-2xl font-bold tracking-wide text-foreground">
-            StudyPoint
+            Velocity
           </span>
         </div>
 
