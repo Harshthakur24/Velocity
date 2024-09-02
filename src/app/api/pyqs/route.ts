@@ -21,9 +21,7 @@ export async function GET(req: NextRequest) {
       );
     }
 
-    const documents = await prisma.document.findMany({
-      where: { category: "PYQ", subject },
-    });
+  
 
     if (documents.length === 0) {
       return NextResponse.json(
