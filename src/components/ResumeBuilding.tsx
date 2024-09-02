@@ -220,7 +220,7 @@ const ResumeBuilder = () => {
               className="w-full bg-blue-500 text-white py-3 rounded-md hover:scale-105 cursor-not-allowed opacity-50 transition bg-gradient-to-r from-[#e74e4e] via-[#764ede] to-[#6cd30b]"
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 1, duration: 0.3 }}
+              transition={{ delay: 0.9, duration: 0.3 }}
             >
               <span className="font-semibold">Download Resume</span>
             </motion.button>
