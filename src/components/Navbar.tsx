@@ -108,9 +108,9 @@ const Navbar = () => {
                 </NavigationMenuContent>
               </NavigationMenuItem>
               <NavigationMenuItem>
-                <Link href="/pyqs" passHref legacyBehavior>
+                <Link href="/resumebuilder" passHref legacyBehavior>
                   <NavigationMenuLink className="font-medium text-foreground transition duration-300 hover:text-gray-300">
-                    Pyqs/Tutorials
+                    Resume Builder
                   </NavigationMenuLink>
                 </Link>
               </NavigationMenuItem>
@@ -169,9 +169,9 @@ const Navbar = () => {
                   {/* </Link> */}
                 </NavigationMenuItem>
                 <NavigationMenuItem>
-                  <Link href="pyqs" passHref legacyBehavior>
+                  <Link href="resumebuilder" passHref legacyBehavior>
                     <NavigationMenuLink className="font-medium text-foreground transition duration-300 hover:text-gray-300">
-                      Pyqs/Tutorials
+                      Resume Builder
                     </NavigationMenuLink>
                   </Link>
                 </NavigationMenuItem>

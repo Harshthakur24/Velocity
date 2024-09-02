@@ -40,7 +40,7 @@ const subjects = [
 const categories = [
   { value: "notes", label: "Notes" },
   { value: "Syllabus", label: "Syllabus" },
-  { value: "pyq", label: "Previous Year Questions (PYQ)" },
+  { value: "ResumeBuilder", label: "ResumeBuilder" },
 ];
 
 export default function SubjectsCategory() {

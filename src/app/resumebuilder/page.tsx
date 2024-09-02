@@ -1,9 +1,9 @@
 import React from "react";
 import { redirect } from "next/navigation";
 import { auth } from "../../../auth";
-import SubjectsPyqsPage from "@/components/SubjectsPyqs";
+import ResumeBuilding from "@/components/ResumeBuilding";
 
-const pyqs = async () => {
+const resumebuilder = async () => {
   const session = await auth();
 
   if (!session?.user && !session) {
@@ -12,9 +12,9 @@ const pyqs = async () => {
 
   return (
     <div>
-      <SubjectsPyqsPage />
+      <ResumeBuilding />
     </div>
   );
 };
 
-export default pyqs;
+export default resumebuilder;

@@ -90,7 +90,6 @@ model Document {
 }
 
 enum DocumentCategory {
-  PYQ
   NOTES
   Syllabus
 }
