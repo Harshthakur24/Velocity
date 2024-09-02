@@ -2,7 +2,7 @@
 
 ## Overview
 
-_Study Point_ is a full-stack e-learning platform designed to assist college students by providing a variety of study materials including notes, previous year question papers (PYQs), Syllabus, tutorials, lab files, and more. The platform also features a discussion forum where users can ask questions and receive answers, enhancing collaborative learning.
+_Velocity_ is a full-stack e-learning platform designed to assist college students by providing a variety of study materials including notes, previous year question papers (PYQs), Syllabus, tutorials, lab files, and more. The platform also features a discussion forum where users can ask questions and receive answers, enhancing collaborative learning.
 
 ## Features
 
