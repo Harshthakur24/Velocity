@@ -1,11 +1,32 @@
 "use client";
 
+import { useState } from "react";
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
 import { useToast } from "@/components/ui/use-toast";
 
 export const Newsletter = () => {
+  const [email, setEmail] = useState("");
   const { toast } = useToast();
+
+  const handleSubmit = (e: any) => {
+    e.preventDefault();
+
+    if (email.trim() === "") {
+      toast({
+        title: "Please enter a valid email address",
+        description: "You need to provide an email to join the community.",
+        variant: "destructive",
+      });
+      return;
+    }
+
+    toast({
+      title: "Thank you for joining our community",
+    });
+
+    window.open("https://discord.gg/b7BcbXzy", "_blank");
+  };
 
   return (
     <section id="newsletter" className="container w-full h-full">
@@ -24,14 +45,7 @@ export const Newsletter = () => {
 
         <form
           className="flex flex-col w-full md:flex-row md:w-6/12 lg:w-4/12 mx-auto gap-4 md:gap-2"
-          onSubmit={(e) => {
-            e.preventDefault();
-            toast({
-              title: "Thank you for subscribing",
-              description:
-                "You will get our latest updates and news in your email.",
-            });
-          }}
+          onSubmit={handleSubmit}
         >
           <Input
             type="email"
@@ -39,13 +53,10 @@ export const Newsletter = () => {
             className="bg-muted/50 dark:bg-muted/80"
             aria-label="email"
             required
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
           />
-          <Button
-            type="submit"
-            onClick={() => window.open("https://discord.gg/b7BcbXzy", "_blank")}
-          >
-            Join
-          </Button>
+          <Button type="submit">Join</Button>
         </form>
       </div>
 
