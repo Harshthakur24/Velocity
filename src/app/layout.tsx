@@ -25,8 +25,11 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <head>
         <link rel="icon" href="/logo.png" />
-        <title>{metadata.title}</title>
-        <meta name="description" content={metadata.description} />
+        <title>Velocity</title>
+        <meta
+          name="description"
+          content="Velocity is an innovative platform designed to be the ultimate hub for students seeking academic resources and community engagement."
+        />
       </head>
 
       <body
