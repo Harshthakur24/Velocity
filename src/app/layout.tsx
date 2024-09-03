@@ -25,11 +25,8 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <head>
         <link rel="icon" href="/logo.png" />
-        <title>Velocity</title>
-        <meta
-          name="description"
-          content="Velocity is an innovative platform designed to be the ultimate hub for students seeking academic resources and community engagement."
-        />
+        <title>{metadata.title}</title>
+        <meta name="description" content={metadata.description} />
       </head>
 
       <body
@@ -45,12 +42,12 @@ export default function RootLayout({
           themes={[
             "light",
             "dark",
-            "Rose",
-            "Blue",
-            "Violet",
-            "Green",
-            "Yellow",
-            "Gray",
+            "rose",
+            "blue",
+            "violet",
+            "green",
+            "yellow",
+            "gray",
           ]}
           disableTransitionOnChange
         >
