@@ -1,4 +1,3 @@
-// app/layout.tsx
 import "./globals.css";
 import { Poppins as FontSans } from "next/font/google";
 import { cn } from "@/lib/utils";
@@ -24,7 +23,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <head />
+      <head>
+        <link rel="icon" href="/favicon.ico" />
+        <title>{metadata.title}</title>
+        <meta name="description" content={metadata.description} />
+      </head>
 
       <body
         className={cn(
