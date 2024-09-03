@@ -148,7 +148,7 @@ export const Footer = ({ className }: { className?: string }) => {
           <div>
             <a
               rel="noreferrer noopener"
-              href="#"
+              href="https://discord.gg/b7BcbXzy"
               className="opacity-60 hover:opacity-100"
             >
               Discord

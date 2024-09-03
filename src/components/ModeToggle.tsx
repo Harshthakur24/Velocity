@@ -1,11 +1,9 @@
-// components/ModeToggle.jsx
 "use client";
 
 import * as React from "react";
 import { Moon, Sun } from "lucide-react";
 import { useTheme } from "next-themes";
 import { Button } from "@/components/ui/button";
-
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -14,7 +12,13 @@ import {
 } from "@/components/ui/dropdown-menu";
 
 export function ModeToggle() {
-  const { setTheme, themes } = useTheme();
+  const { setTheme, themes, theme } = useTheme();
+
+  React.useEffect(() => {
+    if (themes[3] === "violet") {
+      setTheme("violet");
+    }
+  }, [themes, setTheme]);
 
   return (
     <DropdownMenu>
