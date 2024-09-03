@@ -10,7 +10,6 @@ import { ScrollToTop } from "@/components/ScrollToTop";
 import { TechStack } from "@/components/TechStack";
 import dynamic from "next/dynamic";
 
-// Dynamically import the AnimatedWelcome component with ssr disabled
 const AnimatedWelcome = dynamic(() => import("@/components/AnimationWelcome"), {
   ssr: false,
 });
