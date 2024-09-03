@@ -42,12 +42,12 @@ export default function RootLayout({
           themes={[
             "light",
             "dark",
-            "rose",
-            "blue",
-            "violet",
-            "green",
-            "yellow",
-            "gray",
+            "Rose",
+            "Blue",
+            "Violet",
+            "Green",
+            "Yellow",
+            "Gray",
           ]}
           disableTransitionOnChange
         >
