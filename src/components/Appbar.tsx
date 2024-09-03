@@ -6,6 +6,7 @@ import Image from "next/image";
 import { ModeToggle } from "@/components/ModeToggle";
 import Logout from "@/components/Logout";
 import { Button } from "@/components/ui/button";
+import { useRouter } from "next/navigation";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -16,22 +17,22 @@ import { Home, Mail, Menu } from "lucide-react";
 
 const AppBar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
+  const router = useRouter();
 
   return (
     <nav className="sticky top-0 z-40 w-full border-b bg-background">
       <div className="container mx-auto flex max-w-7xl items-center justify-between p-4">
-        <div className="flex items-center space-x-4">
-          <Image
-            src="/logo.png"
-            alt="Logo"
-            width={50}
-            height={50}
-            className="rounded-full"
-          />
-          <span className="text-2xl font-bold tracking-wide text-foreground">
-            Velocity
-          </span>
-        </div>
+        <button
+          className="text-2xl font-bold tracking-wide py-2 px-4 rounded-md transition-colors"
+          style={{
+            background: "linear-gradient(to right, #6a70ed, #de4ec8)",
+            WebkitBackgroundClip: "text",
+            WebkitTextFillColor: "transparent",
+          }}
+          onClick={() => router.push("home")}
+        >
+          Velocity
+        </button>
 
         {/* Desktop Links */}
         <div className="hidden md:flex items-center space-x-4">
