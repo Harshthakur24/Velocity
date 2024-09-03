@@ -40,7 +40,12 @@ export const Newsletter = () => {
             aria-label="email"
             required
           />
-          <Button type="submit">Subscribe</Button>
+          <Button
+            type="submit"
+            onClick={() => window.open("https://discord.gg/b7BcbXzy", "_blank")}
+          >
+            Join
+          </Button>
         </form>
       </div>
 

@@ -41,7 +41,7 @@ export const Hero = () => {
                     4000,
                   ]}
                   wrapper="span"
-                  speed={20}
+                  speed={1}
                   repeat={Infinity}
                 />
                 <span className="text-4xl lg:text-6.5xl md:text-5xl sm:text-3xl">

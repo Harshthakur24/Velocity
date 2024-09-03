@@ -14,17 +14,17 @@ interface FAQProps {
 const FAQList: FAQProps[] = [
   {
     question: "Is this Website free?",
-    answer: "Yes. It is completely free to use.",
+    answer: "Absolutely. It is completely free to use.",
     value: "item-1",
   },
   {
-    question: "what features does i get here?",
+    question: "What features does i get here?",
     answer:
       "You will get free notes ,Resume Builder and Syllabus depending upon your subjects in your semester",
     value: "item-2",
   },
   {
-    question: "How do you store your notes and other study materials?",
+    question: "Where do you store your data?",
     answer:
       "We store everything in our cloud server. We use AWS S3 and cloudfront as our storage provider.",
     value: "item-3",
@@ -38,7 +38,7 @@ const FAQList: FAQProps[] = [
   {
     question: "Does the code is open source?",
     answer:
-      "Yes it is open source. You can check it out on github and raise issues if you want.",
+      "Yes it is open source. You can check it out on github and raise issues if you want. Just give me a mail and I'll let you contribute.",
     value: "item-5",
   },
 ];
@@ -47,10 +47,10 @@ export const FAQ = () => {
   return (
     <section id="faq" className="container py-24 sm:py-32">
       <h2 className="text-3xl md:text-4xl font-bold mb-4">
-        Frequently Asked{" "}
-        <span className="bg-gradient-to-b from-primary/60 to-primary text-transparent bg-clip-text">
-          Questions
+        <span className=" bg-gradient-to-b from-primary/60 to-primary text-transparent bg-clip-text">
+          Questions{" "}
         </span>
+        you guys might have in mind...
       </h2>
 
       <Accordion type="single" collapsible className="w-full AccordionRoot">

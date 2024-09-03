@@ -46,8 +46,11 @@ const techstacks: TechstackProps[] = [
 
 export const TechStack = () => {
   return (
-    <section id="TechStacks" className="container pt-24 sm:py-32">
-      <h2 className="text-center text-md lg:text-xl font-bold mb-8 text-primary">
+    <section
+      id="TechStacks"
+      className="container pt-24 sm:py-32 -mt-24 scale-105"
+    >
+      <h2 className="text-center text-4xl lg:text-5xl font-bold mb-10 text-primary">
         Our Tech Stack
       </h2>
 

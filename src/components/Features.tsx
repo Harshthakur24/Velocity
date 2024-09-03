@@ -43,24 +43,26 @@ const features: FeatureProps[] = [
 const featureList: string[] = [
   "User-friendly design",
   "Previous Year Papers",
-  "Syllabus and notes",
   "Study materials",
-  "Ai Powered",
-  "Easy to use",
-  "Saves time",
-  "Newsletter",
-  "Minimalist",
+  "Career growth tools",
+  "Job board and internship portal",
+  "Mentorship matching",
+  "Resume builder",
+  "Interview preparation resources",
+  "Community forums",
+  "Newsletter subscription",
   "Contact us and Feedback form",
 ];
 
 export const Features = () => {
   return (
     <section id="features" className="container py-24 sm:py-32 space-y-8">
-      <h2 className="text-3xl lg:text-4xl font-bold md:text-center">
-        Many{" "}
+      <h2 className="text-4xl lg:text-5xl font-bold md:text-center">
+        But why would I use{" "}
         <span className="bg-gradient-to-b from-primary/60 to-primary text-transparent bg-clip-text">
-          Great Features
+          Velocity{" "}
         </span>
+        ?
       </h2>
 
       <div className="flex flex-wrap md:justify-center gap-4">

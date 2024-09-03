@@ -56,7 +56,7 @@ const Navbar = () => {
                   </span>
                 </NavigationMenuTrigger>
                 <NavigationMenuContent>
-                  <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr] bg-gray-800 dark:bg-white rounded-lg shadow-lg">
+                  <ul className="p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr] bg-gray-800 dark:bg-white rounded-lg shadow-lg">
                     <li className="">
                       <NavigationMenuLink asChild>
                         <Link
@@ -85,22 +85,20 @@ const Navbar = () => {
                   </span>
                 </NavigationMenuTrigger>
                 <NavigationMenuContent>
-                  <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr] bg-gray-800 dark:bg-white rounded-lg shadow-lg">
+                  <ul className="gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr] bg-gray-800 dark:bg-white rounded-lg shadow-lg">
                     <li className="">
                       <NavigationMenuLink asChild>
                         <Link
                           href="/about-me"
                           className="flex h-full w-full select-none flex-col justify-end rounded-lg bg-gradient-to-b from-gray-800 to-gray-700 dark:from-gray-200 dark:to-gray-300 p-6 no-underline outline-none shadow-lg transition-transform transform hover:scale-105 focus:shadow-xl"
                         >
-                          <div className="mb-3 mt-5 text-xl font-semibold text-white dark:text-gray-900">
-                            About Me
-                          </div>
-                          <p className="text-sm leading-relaxed text-gray-300 dark:text-gray-700">
+                          <p>
                             Hello, I am Harsh Thakur. I am a Full Stack
                             Developer currently pursuing my major in Computer
                             Science Engineering. You can find me on GitHub and
-                            Twitter/X. I have provided all the links below.
+                            Twitter/X.
                           </p>
+                          <p>I have provided all the links below.</p>
                         </Link>
                       </NavigationMenuLink>
                     </li>
