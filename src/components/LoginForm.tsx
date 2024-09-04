@@ -29,7 +29,7 @@ const LoginForm = () => {
         <div className="flex flex-col items-center space-y-4">
           <Button
             variant="outline"
-            className="flex items-center justify-center hover:bg-blue-700 py-2 px-4 rounded-md w-full transition duration-300 text-gray-100 border border-blue-500"
+            className="flex items-center justify-center hover:bg-blue-700 py-2 px-4 rounded-md w-full transition duration-300 text-gray-900 border border-blue-500"
             type="submit"
             name="action"
             value="google"
@@ -39,7 +39,7 @@ const LoginForm = () => {
           </Button>
           <Button
             variant="outline"
-            className="flex items-center justify-center hover:bg-purple-700 py-2 px-4 rounded-md w-full transition duration-300 text-gray-100 border border-purple-500"
+            className="flex items-center justify-center hover:bg-purple-700 py-2 px-4 rounded-md w-full transition duration-300 text-gray-900 border border-purple-500"
             type="submit"
             name="action"
             value="github"
@@ -49,7 +49,7 @@ const LoginForm = () => {
           </Button>
           <Button
             variant="outline"
-            className="flex items-center justify-center hover:bg-green-800 py-2 px-4 rounded-md w-full transition duration-300 text-gray-100 border border-green-600"
+            className="flex items-center justify-center hover:bg-green-800 py-2 px-4 rounded-md w-full transition duration-300 text-gray-900 border border-green-600"
             type="submit"
             name="action"
             value="spotify"
