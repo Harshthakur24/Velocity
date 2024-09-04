@@ -69,7 +69,7 @@ export const Hero = () => {
           <Button
             onClick={() => router.push("contact-us")}
             variant="default"
-            className="w-full sm:w-auto transform transition duration-300 hover:scale-110 rounded-full px-6"
+            className="sm:w-auto transform transition duration-300 hover:scale-110 rounded-full px-6"
             size="lg"
           >
             <span className="font-semibold">Contact us</span>
