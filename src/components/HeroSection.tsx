@@ -25,10 +25,10 @@ export const Hero = () => {
         <main className="text-4xl md:text-5xl font-bold">
           <h1 className="flex">
             <div>
-              <span className="text-4xl lg:text-6.5xl md:text-5xl sm:text-3xl inline bg-gradient-to-r from-[#e74e4e] to-[#764ede] text-transparent bg-clip-text">
+              <span className="text-3xl lg:text-6.5xl md:text-5xl sm:text-3xl inline bg-gradient-to-r from-[#e74e4e] to-[#764ede] text-transparent bg-clip-text">
                 Accelarate Your
               </span>{" "}
-              <span className="text-4xl lg:text-6.5xl md:text-5xl sm:text-3xl inline bg-gradient-to-r from-[#764ede] to-[#eb4fd6] text-transparent bg-clip-text">
+              <span className="text-3xl lg:text-6.5xl md:text-5xl sm:text-3xl inline bg-gradient-to-r from-[#764ede] to-[#eb4fd6] text-transparent bg-clip-text">
                 <TypeAnimation
                   sequence={[
                     "Growth",
@@ -44,18 +44,18 @@ export const Hero = () => {
                   speed={1}
                   repeat={Infinity}
                 />
-                <span className="text-4xl lg:text-6.5xl md:text-5xl sm:text-3xl">
+                <span className="text-3xl lg:text-6.5xl md:text-5xl sm:text-3xl">
                   Journey
                 </span>
               </span>
             </div>
           </h1>{" "}
           <div>
-            <span className="text-4xl lg:text-6.5xl md:text-5xl sm:text-3xl inline bg-gradient-to-r from-[#de4ec8] to-[#6a70ed] text-transparent bg-clip-text">
+            <span className="text-3xl lg:text-6.5xl md:text-5xl sm:text-3xl inline bg-gradient-to-r from-[#de4ec8] to-[#6a70ed] text-transparent bg-clip-text">
               Fueled
             </span>{" "}
             <h2 className="inline">
-              <span className="text-4xl lg:text-6.5xl md:text-5xl sm:text-3xl inline bg-gradient-to-r from-[#6a70ed] to-[#6cd30b] text-transparent bg-clip-text">
+              <span className="text-3xl lg:text-6.5xl md:text-5xl sm:text-3xl inline bg-gradient-to-r from-[#6a70ed] to-[#6cd30b] text-transparent bg-clip-text">
                 by Velocity
               </span>{" "}
             </h2>
@@ -74,7 +74,7 @@ export const Hero = () => {
           >
             <span className="font-semibold">Contact us</span>
           </Button>
-          <SearchBar className="w-full sm:w-auto transform transition duration-300 hover:scale-110 rounded px-6" />
+          <SearchBar className="w-auto sm:w-auto transform transition duration-300 hover:scale-110 rounded px-6" />
         </div>
       </div>
 
