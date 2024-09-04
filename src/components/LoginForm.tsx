@@ -52,7 +52,7 @@ const LoginForm = () => {
             name="action"
             value="spotify"
           >
-            <FaSpotify className="mr-2 scale-110 text-green-600" />
+            <FaSpotify className="mr-2 scale-110 text-green-700" />
             <span className="font-semibold">Sign In With Spotify</span>
           </button>
         </div>
