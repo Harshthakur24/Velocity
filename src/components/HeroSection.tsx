@@ -20,12 +20,12 @@ export const Hero = () => {
   const router = useRouter();
 
   return (
-    <section className="container flex flex-col items-center justify-center min-h-screen py-8 md:py-18 space-y-12 animate-fadeIn w-full">
+    <section className="container flex flex-col items-center justify-center min-h-screen py-8 md:py-18 space-y-14 animate-fadeIn w-full">
       <div className="text-center space-y-8">
         <main className="text-4xl md:text-5xl font-bold">
           <h1 className="flex">
             <div>
-              <span className="text-3xl lg:text-6.5xl md:text-5xl sm:text-3xl inline bg-gradient-to-r from-[#e74e4e] to-[#764ede] text-transparent bg-clip-text">
+              <span className="text-3cxl lg:text-6.5xl md:text-5xl sm:text-3xl inline bg-gradient-to-r from-[#e74e4e] to-[#764ede] text-transparent bg-clip-text">
                 Accelarate Your
               </span>{" "}
               <span className="text-3xl lg:text-6.5xl md:text-5xl sm:text-3xl inline bg-gradient-to-r from-[#764ede] to-[#eb4fd6] text-transparent bg-clip-text">
@@ -62,8 +62,8 @@ export const Hero = () => {
           </div>
         </main>
         <p className="text-1xl lg:text-lg md:text-lg text-muted-foreground w-full mx-auto">
-          Join Velocity to level up your skills and advance your career with
-          expert resources and community support.
+          Join Velocity to advance your skills and career with expert resources
+          and community support.
         </p>
         <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4">
           <Button
@@ -74,7 +74,6 @@ export const Hero = () => {
           >
             <span className="font-semibold">Contact us</span>
           </Button>
-          <SearchBar className="w-auto sm:w-auto transform transition duration-300 hover:scale-110 rounded px-6" />
         </div>
       </div>
 

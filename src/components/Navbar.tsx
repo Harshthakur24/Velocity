@@ -95,10 +95,11 @@ const Navbar = () => {
                           <p>
                             Hello, I am Harsh Thakur. I am a Full Stack
                             Developer currently pursuing my major in Computer
-                            Science Engineering. You can find me on GitHub and
-                            Twitter/X.
+                            Science Engineering. You can find and connect me on
+                            GitHub and Twitter/X. I have provided all the links
+                            below.
                           </p>
-                          <p>I have provided all the links below.</p>
+                          <p></p>
                         </Link>
                       </NavigationMenuLink>
                     </li>
