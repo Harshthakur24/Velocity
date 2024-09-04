@@ -17,54 +17,54 @@ const LoginForm = () => {
     >
       <form
         action={doSocialLogin}
-        className="bg-gray-900 p-10 rounded-3xl shadow-2xl w-full max-w-md animate-fadeIn"
+        className="bg-gray-900 p-6 sm:p-8 md:p-10 lg:p-12 rounded-3xl shadow-2xl w-full max-w-sm sm:max-w-md animate-fadeIn"
       >
-        <h2 className="text-3xl font-bold mb-8 text-center text-gray-100">
+        <h2 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 text-center text-gray-100">
           Welcome to Velocity <MdLogin className="inline-block text-blue-400" />
         </h2>
-        <p className="text-center text-gray-300 mb-6">
+        <p className="text-sm sm:text-base text-center text-gray-300 mb-4 sm:mb-6">
           Sign in to continue{" "}
           <RiLockPasswordLine className="inline-block text-blue-400" />
         </p>
-        <div className="flex flex-col items-center space-y-4">
+        <div className="flex flex-col items-center space-y-3 sm:space-y-4">
           <Button
             variant="outline"
-            className="flex items-center justify-center hover:bg-blue-700 py-2 px-4 rounded-md w-full transition duration-300 text-gray-900 border border-blue-500"
+            className="flex items-center justify-center hover:bg-blue-700 py-2 px-3 sm:py-2.5 sm:px-4 rounded-md w-full transition duration-300 text-gray-900 border border-blue-500"
             type="submit"
             name="action"
             value="google"
           >
-            <FcGoogle className="mr-2" />
-            Sign In With Google
+            <FcGoogle className="mr-2 scale-110" />
+            <span className="text-white">Sign In With Google</span>
           </Button>
           <Button
             variant="outline"
-            className="flex items-center justify-center hover:bg-purple-700 py-2 px-4 rounded-md w-full transition duration-300 text-gray-900 border border-purple-500"
+            className="flex items-center justify-center hover:bg-purple-700 py-2 px-3 sm:py-2.5 sm:px-4 rounded-md w-full transition duration-300 text-gray-900 border border-purple-500"
             type="submit"
             name="action"
             value="github"
           >
-            <FaGithub className="mr-2" />
-            Sign In With GitHub
+            <FaGithub className="mr-2 text-white scale-110" />
+            <span className="text-white">Sign In With GitHub</span>
           </Button>
           <Button
             variant="outline"
-            className="flex items-center justify-center hover:bg-green-800 py-2 px-4 rounded-md w-full transition duration-300 text-gray-900 border border-green-600"
+            className="flex items-center justify-center hover:bg-green-700 py-2 px-3 sm:py-2.5 sm:px-4 rounded-md w-full transition duration-300 text-gray-900 border border-green-600"
             type="submit"
             name="action"
             value="spotify"
           >
-            <FaSpotify className="mr-2" />
-            Sign In With Spotify
+            <FaSpotify className="mr-2 text-[#1DB954] scale-110" />
+            <span className="text-white">Sign In With Spotify</span>
           </Button>
         </div>
-        <div className="mt-8 text-center text-gray-300">
-          <p className="mb-2">
+        <div className="mt-6 sm:mt-8 text-center text-gray-300">
+          <p className="text-xs sm:text-sm mb-2">
             We only support Google for now.<span> </span>
             <RiLockPasswordLine className="inline-block text-blue-400" />
             <a href="#" className="text-blue-300 hover:underline"></a>
           </p>
-          <div className="-mb-4">Made with ❤️ by Harsh</div>
+          <div className="-mb-4 text-xs sm:text-sm">Made with ❤️ by Harsh</div>
         </div>
       </form>
     </div>
