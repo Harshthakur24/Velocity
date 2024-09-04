@@ -15,7 +15,7 @@ export function ModeToggle() {
   const { setTheme, themes, theme } = useTheme();
 
   React.useEffect(() => {
-    if (themes[3] === "violet") {
+    if (themes[0] === "violet") {
       setTheme("violet");
     }
   }, [themes, setTheme]);
