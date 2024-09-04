@@ -14,12 +14,6 @@ import {
 export function ModeToggle() {
   const { setTheme, themes, theme } = useTheme();
 
-  React.useEffect(() => {
-    if (themes[0] === "violet") {
-      setTheme("violet");
-    }
-  }, [themes, setTheme]);
-
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
