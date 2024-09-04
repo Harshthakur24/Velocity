@@ -34,8 +34,8 @@ const LoginForm = () => {
             name="action"
             value="google"
           >
-            <FcGoogle className="mr-2 text-[#4285F4] scale-110" />
-            <span className="text-white">Sign In With Google</span>
+            <FcGoogle className="mr-2 scale-110" />
+            Sign In With Google
           </Button>
           <Button
             variant="outline"
@@ -44,8 +44,8 @@ const LoginForm = () => {
             name="action"
             value="github"
           >
-            <FaGithub className="mr-2 text-white scale-110" />
-            <span className="text-white">Sign In With GitHub</span>
+            <FaGithub className="mr-2 scale-110" />
+            Sign In With GitHub
           </Button>
           <Button
             variant="outline"
@@ -54,8 +54,8 @@ const LoginForm = () => {
             name="action"
             value="spotify"
           >
-            <FaSpotify className="mr-2 text-[#1DB954] scale-110" />
-            <span className="text-white">Sign In With Spotify</span>
+            <FaSpotify className="mr-2 scale-110" />
+            Sign In With Spotify
           </Button>
         </div>
         <div className="mt-8 text-center text-gray-300">
