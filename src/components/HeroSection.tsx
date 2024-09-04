@@ -61,10 +61,9 @@ export const Hero = () => {
             </h2>
           </div>
         </main>
-        <p className="text-lg text-muted-foreground md:w-10/12 mx-auto">
-          Join Velocity today to revolutionize your skill development and growth
-          with the resources and community support needed to excel in your
-          career.
+        <p className="text-1xl lg:text-lg md:text-lg text-muted-foreground w-full mx-auto">
+          Join Velocity to level up your skills and advance your career with
+          expert resources and community support.
         </p>
         <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4">
           <Button
