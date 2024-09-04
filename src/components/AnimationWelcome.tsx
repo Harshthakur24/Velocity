@@ -24,7 +24,7 @@ const AnimatedWelcome = ({ user }: { user: any }) => {
           alt="User Avatar"
           width={60}
           height={60}
-          className="rounded-full border-2 border-primary"
+          className="rounded-full border-2"
         />
       </motion.div>
       <motion.h1
