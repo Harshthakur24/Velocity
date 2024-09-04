@@ -24,9 +24,8 @@ _Velocity_ is a full-stack e-learning platform designed to assist college studen
 
 1. _Clone the repository_:
    bash
-   git clone https://github.com/nikhilsahni7/STUDY-POINT.git
-   cd study-point
-
+   git clone https://github.com/Harshthakur24/Velocity.git
+   cd velocity
 2. _Install dependencies_:
    bash
    bun install
@@ -89,6 +88,6 @@ This project is licensed under the MIT License.
 
 ## Contact
 
-For any queries or feedback, please reach out via [nikhil.sahni321@gmail.com](mailto:nikhil.sahni321@gmail.com).
+For any queries or feedback, please reach out via [thakur2004harsh@gmail.com]).
 
 ---
