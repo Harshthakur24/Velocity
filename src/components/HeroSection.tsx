@@ -78,7 +78,9 @@ export const Hero = () => {
       </div>
 
       <div className="space-y-8 text-center">
-        <h3 className="text-5xl font-bold mt-8">Join Our Vibrant Community</h3>
+        <h3 className="text-5xl font-bold mt-8">
+          Join Our Vibrant <span className="text-primary">Community</span>
+        </h3>
         <div className="grid md:grid-cols-3 gap-6">
           <Card className="bg-card hover:shadow-lg transition-shadow">
             <CardHeader>
