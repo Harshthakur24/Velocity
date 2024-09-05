@@ -15,6 +15,8 @@ import {
   AiOutlineBook,
   AiOutlineFileText,
 } from "react-icons/ai";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const pdfStyles = StyleSheet.create({
   page: { padding: 30, backgroundColor: "#f9f9f9" },
@@ -91,6 +93,11 @@ const ResumeBuilder = () => {
 
   const handleSubmit = (e: any) => {
     e.preventDefault();
+    if (!isFormValid) {
+      toast.error("Please fill out all sections before downloading!", {
+        position: "top-center",
+      });
+    }
   };
 
   const isFormValid = Object.values(formData).every(
@@ -98,13 +105,13 @@ const ResumeBuilder = () => {
   );
 
   return (
-    <div className="p-8 max-w-lg mx-auto">
+    <div className="p-8 max-w-lg mx-auto bg-black text-white">
       <motion.h1
-        className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#e74e4e] via-[#764ede] to-[#6cd30b] mb-8 text-center"
+        className="text-5xl font-bold text-transparent text-cyan-100 bg-clip-text bg-gradient-to-r mb-8 text-center"
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
       >
-        Resume Builder
+        Resume <span className="text-primary">Builder</span>
       </motion.h1>
       <form onSubmit={handleSubmit} className="space-y-4">
         <motion.div
@@ -119,7 +126,7 @@ const ResumeBuilder = () => {
             name="name"
             value={formData.name}
             onChange={handleChange}
-            className="w-full p-3 border-2 border-[#764ede] rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 transition"
+            className="w-full p-3 border-2 bg-black text-white rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 transition"
           />
         </motion.div>
         <motion.div
@@ -134,7 +141,7 @@ const ResumeBuilder = () => {
             name="profession"
             value={formData.profession}
             onChange={handleChange}
-            className="w-full p-3 border-2 border-[#764ede] rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 transition"
+            className="w-full p-3 border-2 bg-black text-white rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 transition"
           />
         </motion.div>
         <motion.div
@@ -149,7 +156,7 @@ const ResumeBuilder = () => {
             name="skills"
             value={formData.skills}
             onChange={handleChange}
-            className="w-full p-3 border-2 border-[#764ede] rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 transition"
+            className="w-full p-3 border-2 bg-black text-white rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 transition"
           />
         </motion.div>
         <motion.div
@@ -163,7 +170,7 @@ const ResumeBuilder = () => {
             name="experience"
             value={formData.experience}
             onChange={handleChange}
-            className="w-full p-3 border-2 border-[#764ede] rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 transition"
+            className="w-full p-3 border-2 bg-black text-white rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 transition"
           />
         </motion.div>
         <motion.div
@@ -178,7 +185,7 @@ const ResumeBuilder = () => {
             name="college"
             value={formData.college}
             onChange={handleChange}
-            className="w-full p-3 border-2 border-[#764ede] rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 transition"
+            className="w-full p-3 border-2 bg-black text-white rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 transition"
           />
         </motion.div>
         <motion.div
@@ -192,7 +199,7 @@ const ResumeBuilder = () => {
             name="achievements"
             value={formData.achievements}
             onChange={handleChange}
-            className="w-full p-3 border-2 border-[#764ede] rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 transition"
+            className="w-full p-3 border-2 bg-black text-white rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 transition"
           />
         </motion.div>
         <motion.div
@@ -208,7 +215,7 @@ const ResumeBuilder = () => {
               {({ loading }) => (
                 <motion.button
                   type="button"
-                  className="w-full bg-blue-500 text-white py-3 hover:scale-105 rounded-md hover:bg-blue-600 transition bg-gradient-to-r from-[#e74e4e] via-[#764ede] to-[#6cd30b]"
+                  className="w-full bg-primary text-white py-3 rounded-md transition bg-gradient-to-r"
                 >
                   <span className="font-semibold">Download Resume</span>
                 </motion.button>
@@ -216,17 +223,15 @@ const ResumeBuilder = () => {
             </PDFDownloadLink>
           ) : (
             <motion.button
-              type="button"
-              className="w-full bg-blue-500 text-white py-3 rounded-md hover:scale-105 cursor-not-allowed opacity-50 transition bg-gradient-to-r from-[#e74e4e] via-[#764ede] to-[#6cd30b]"
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 0.9, duration: 0.3 }}
+              type="submit"
+              className="w-full bg-primary text-white py-3 rounded-md transition bg-gradient-to-r"
             >
               <span className="font-semibold">Download Resume</span>
             </motion.button>
           )}
         </motion.div>
       </form>
+      <ToastContainer />
     </div>
   );
 };

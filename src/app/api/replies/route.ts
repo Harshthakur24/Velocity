@@ -22,7 +22,7 @@ export async function POST(req: NextRequest) {
         userId,
         discussionId,
       },
-      include: { user: true }, // Include user data in the response
+      include: { user: true },
     });
     return NextResponse.json(reply, { status: 200 });
   } catch (error: any) {

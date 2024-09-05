@@ -4,7 +4,7 @@ import { redirect } from "next/navigation";
 import { Hero } from "@/components/HeroSection";
 import { Features } from "@/components/Features";
 import { Testimonials } from "@/components/Testimonials";
-import { Newsletter } from "@/components/NewsLetter";
+import { DiscordCommunity } from "@/components/DiscordCommunity";
 import { FAQ } from "@/components/Faqs";
 import { ScrollToTop } from "@/components/ScrollToTop";
 import { TechStack } from "@/components/TechStack";
@@ -26,7 +26,7 @@ const HomePage = async () => {
       <Hero />
       <Features />
       <Testimonials />
-      <Newsletter />
+      <DiscordCommunity />
       <FAQ />
       <TechStack />
       <ScrollToTop />
