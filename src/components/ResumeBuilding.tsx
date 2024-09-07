@@ -70,11 +70,21 @@ const MyDocument = ({ formData }: any) => (
           <strong>Achievements:</strong> {formData.achievements}
         </Text>
       </View>
+      <View style={pdfStyles.section}>
+        <Text style={pdfStyles.text}>
+          <strong>Certifications:</strong> {formData.certifications}
+        </Text>
+      </View>
+      <View style={pdfStyles.section}>
+        <Text style={pdfStyles.text}>
+          <strong>Projects:</strong> {formData.projects}
+        </Text>
+      </View>
     </Page>
   </Document>
 );
 
-const ResumeBuilder = () => {
+const ResumeBuilder: React.FC = () => {
   const [formData, setFormData] = useState({
     name: "",
     profession: "",
@@ -82,20 +92,28 @@ const ResumeBuilder = () => {
     experience: "",
     college: "",
     achievements: "",
+    certifications: "",
+    projects: "",
+    email: "",
+    phone: "",
+    linkedin: "",
+    github: "",
   });
 
-  const handleChange = (e: any) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value,
     });
   };
 
-  const handleSubmit = (e: any) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (!isFormValid) {
       toast.error("Please fill out all sections before downloading!", {
-        position: "top-center",
+        position: "top-right",
       });
     }
   };
@@ -105,135 +123,87 @@ const ResumeBuilder = () => {
   );
 
   return (
-    <div className="p-8 max-w-lg mx-auto bg-black text-white">
+    <div className="p-8 max-w-4xl mx-auto">
       <motion.h1
-        className="text-5xl font-bold text-transparent text-cyan-100 bg-clip-text bg-gradient-to-r mb-8 text-center"
+        className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r text-white mb-8 text-center"
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
       >
-        Resume <span className="text-primary">Builder</span>
+        Resume<span className="text-primary"> Builder</span>
       </motion.h1>
       <form onSubmit={handleSubmit} className="space-y-4">
-        <motion.div
-          className="w-full"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.2 }}
-        >
-          <input
-            type="text"
-            placeholder="Name"
-            name="name"
-            value={formData.name}
-            onChange={handleChange}
-            className="w-full p-3 border-2 bg-black text-white rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 transition"
-          />
-        </motion.div>
-        <motion.div
-          className="w-full"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.3 }}
-        >
-          <input
-            type="text"
-            placeholder="Profession"
-            name="profession"
-            value={formData.profession}
-            onChange={handleChange}
-            className="w-full p-3 border-2 bg-black text-white rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 transition"
-          />
-        </motion.div>
-        <motion.div
-          className="w-full"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.4 }}
-        >
-          <input
-            type="text"
-            placeholder="Skills"
-            name="skills"
-            value={formData.skills}
-            onChange={handleChange}
-            className="w-full p-3 border-2 bg-black text-white rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 transition"
-          />
-        </motion.div>
-        <motion.div
-          className="w-full"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.5 }}
-        >
-          <textarea
-            placeholder="Experience"
-            name="experience"
-            value={formData.experience}
-            onChange={handleChange}
-            className="w-full p-3 border-2 bg-black text-white rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 transition"
-          />
-        </motion.div>
-        <motion.div
-          className="w-full"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.6 }}
-        >
-          <input
-            type="text"
-            placeholder="College"
-            name="college"
-            value={formData.college}
-            onChange={handleChange}
-            className="w-full p-3 border-2 bg-black text-white rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 transition"
-          />
-        </motion.div>
-        <motion.div
-          className="w-full"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.7 }}
-        >
-          <textarea
-            placeholder="Achievements"
-            name="achievements"
-            value={formData.achievements}
-            onChange={handleChange}
-            className="w-full p-3 border-2 bg-black text-white rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 transition"
-          />
-        </motion.div>
-        <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ delay: 1, duration: 0.5 }}
-        >
+        <div className="grid grid-cols-2 gap-6">
+          {[
+            "name",
+            "profession",
+            "skills",
+            "experience",
+            "college",
+            "achievements",
+            "certifications",
+            "projects",
+            "email",
+            "phone",
+            "linkedin",
+            "github",
+          ].map((field, index) => (
+            <motion.div
+              key={field}
+              className="w-full"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.2 + index * 0.1 }}
+            >
+              {field === "experience" || field === "achievements" ? (
+                <textarea
+                  placeholder={capitalizeFirstLetter(field)}
+                  name={field}
+                  value={formData[field]}
+                  onChange={handleChange}
+                  className="w-full p-3 border-2 bg-black text-white rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 transition"
+                />
+              ) : (
+                <input
+                  type={field === "email" ? "email" : "text"}
+                  placeholder={capitalizeFirstLetter(field)}
+                  name={field}
+                  value={formData[field]}
+                  onChange={handleChange}
+                  className="w-full p-3 border-2 bg-black text-white rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 transition"
+                />
+              )}
+            </motion.div>
+          ))}
+        </div>
+        <div className="text-center">
           {isFormValid ? (
             <PDFDownloadLink
               document={<MyDocument formData={formData} />}
-              fileName="resume.pdf"
+              fileName={`${formData.name}_resume.pdf`}
+              className="w-auto bg-primary text-white py-3 rounded-md px-3 transition bg-gradient-to-r hover:bg-blue-500"
             >
-              {({ loading }) => (
-                <motion.button
-                  type="button"
-                  className="w-full bg-primary text-white py-3 rounded-md transition bg-gradient-to-r"
-                >
-                  <span className="font-semibold">Download Resume</span>
-                </motion.button>
-              )}
+              {({ loading }) =>
+                loading ? "Generating PDF..." : "Download Your Resume"
+              }
             </PDFDownloadLink>
           ) : (
-            <motion.button
+            <button
               type="submit"
-              className="w-full bg-primary text-white py-3 rounded-md transition bg-gradient-to-r"
+              className="w-auto bg-gray-400 cursor-not-allowed py-3 px-3 rounded-md transition"
+              onClick={handleSubmit}
             >
-              <span className="font-semibold">Download Resume</span>
-            </motion.button>
+              Download Your Resume
+            </button>
           )}
-        </motion.div>
+        </div>
       </form>
       <ToastContainer />
     </div>
   );
+};
+
+const capitalizeFirstLetter = (string: string) => {
+  return string.charAt(0).toUpperCase() + string.slice(1);
 };
 
 export default ResumeBuilder;
