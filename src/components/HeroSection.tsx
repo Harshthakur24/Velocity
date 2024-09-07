@@ -1,5 +1,5 @@
 "use client";
-import { useState, useEffect } from "react"; // Added here for mobile detection
+import { useState, useEffect } from "react";
 import { AlertHero } from "./Alert";
 import { HeroCards } from "./HeroCard";
 import SearchBar from "./SearchBar";

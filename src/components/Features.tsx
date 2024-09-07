@@ -1,3 +1,5 @@
+"use client";
+
 import { Badge } from "./ui/badge";
 import {
   Card,
@@ -6,6 +8,8 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import { useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
 
 interface FeatureProps {
   title: string;
@@ -52,6 +56,22 @@ const featureList: string[] = [
 ];
 
 export const Features = () => {
+  const router = useRouter();
+
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkIfMobile = () => {
+      setIsMobile(window.innerWidth <= 640);
+    };
+
+    checkIfMobile();
+    window.addEventListener("resize", checkIfMobile);
+
+    return () => {
+      window.removeEventListener("resize", checkIfMobile);
+    };
+  }, []);
   return (
     <section id="features" className="container py-24 sm:py-32 space-y-10">
       <h2 className="text-4xl lg:text-5xl font-bold md:text-center">
@@ -62,15 +82,19 @@ export const Features = () => {
         ?
       </h2>
 
-      <div className="flex flex-wrap md:justify-center gap-4">
-        {featureList.map((feature: string) => (
-          <div key={feature}>
-            <Badge variant="secondary" className="text-sm">
-              {feature}
-            </Badge>
-          </div>
-        ))}
-      </div>
+      {!isMobile ? (
+        <div className="flex flex-wrap md:justify-center gap-4">
+          {featureList.map((feature: string) => (
+            <div key={feature}>
+              <Badge variant="secondary" className="text-sm">
+                {feature}
+              </Badge>
+            </div>
+          ))}
+        </div>
+      ) : (
+        <div></div>
+      )}
 
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         {features.map(({ title, description, image }: FeatureProps) => (
@@ -80,15 +104,14 @@ export const Features = () => {
             </CardHeader>
 
             <CardContent>{description}</CardContent>
-            
-              <CardFooter>
-                <img
-                  src={image}
-                  alt="About feature"
-                  className="w-[200px] lg:w-[300px] mx-auto"
-                />
-              </CardFooter>
-            
+
+            <CardFooter>
+              <img
+                src={image}
+                alt="About feature"
+                className="w-[200px] lg:w-[300px] mx-auto"
+              />
+            </CardFooter>
           </Card>
         ))}
       </div>
