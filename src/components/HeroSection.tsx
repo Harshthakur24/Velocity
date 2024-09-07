@@ -1,4 +1,5 @@
 "use client";
+import { useState, useEffect } from "react"; // Added here for mobile detection
 import { AlertHero } from "./Alert";
 import { HeroCards } from "./HeroCard";
 import SearchBar from "./SearchBar";
@@ -14,51 +15,84 @@ import {
   CardContent,
 } from "./ui/card";
 import { Badge } from "./ui/badge";
-import { MessageCircle, TrendingUp, Users } from "lucide-react";
+import { Divide, MessageCircle, TrendingUp, Users } from "lucide-react";
 
 export const Hero = () => {
   const router = useRouter();
 
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkIfMobile = () => {
+      setIsMobile(window.innerWidth <= 640);
+    };
+
+    checkIfMobile();
+    window.addEventListener("resize", checkIfMobile);
+
+    return () => {
+      window.removeEventListener("resize", checkIfMobile);
+    };
+  }, []);
+
   return (
     <div>
-      <img
-        className="w-15 h-9 ml-28 -mt-5 animate-[customBounce_3s_ease-in-out_infinite]"
-        src="rocket.png"
-        alt="rocket"
-      />
-
-      <div className="relative w-full">
+      {!isMobile ? (
         <img
-          className="w-13 h-9 absolute right-48 bottom-0 animate-[customBounce_3s_ease-in-out_infinite]"
-          src="codetag.png"
-          alt="codetag"
+          className="w-15 h-9 ml-28 -mt-5 animate-[customBounce_3s_ease-in-out_infinite]"
+          src="rocket.png"
+          alt="rocket"
         />
-      </div>
+      ) : (
+        <div></div>
+      )}
+
+      {!isMobile ? (
+        <div className="relative w-full">
+          <img
+            className="w-13 h-9 absolute right-48 bottom-0 animate-[customBounce_3s_ease-in-out_infinite]"
+            src="codetag.png"
+            alt="codetag"
+          />
+        </div>
+      ) : (
+        <div className="relative w-full flex">
+          <img
+            className="w-13 h-9 -mb-5 -mr-8 absolute right-48 bottom-0 animate-[customBounce_3s_ease-in-out_infinite]"
+            src="codetag.png"
+            alt="codetag"
+          />
+        </div>
+      )}
 
       <section className="container flex flex-col items-center justify-center min-h-screen py-8 md:py-18 space-y-14 animate-fadeIn w-full">
         <div className="text-center space-y-8">
           <main className="text-4xl md:text-5xl font-bold">
             <h1 className="flex">
               <div>
-                <span className="text-3cxl lg:text-6.5xl md:text-5xl sm:text-3xl inline bg-gradient-to-r from-[#e74e4e] to-[#764ede] text-transparent bg-clip-text">
-                  Accelarate Your
+                <span className="text-3xl lg:text-6.5xl md:text-5xl sm:text-3xl inline bg-gradient-to-r from-[#e74e4e] to-[#764ede] text-transparent bg-clip-text">
+                  Accelerate Your
                 </span>{" "}
                 <span className="text-3xl lg:text-6.5xl md:text-5xl sm:text-3xl inline bg-gradient-to-r from-[#764ede] to-[#eb4fd6] text-transparent bg-clip-text">
-                  <TypeAnimation
-                    sequence={[
-                      "Growth",
-                      4000,
-                      "Coding",
-                      4000,
-                      "Career",
-                      4000,
-                      "Skill",
-                      4000,
-                    ]}
-                    wrapper="span"
-                    speed={1}
-                    repeat={Infinity}
-                  />
+                  {!isMobile ? (
+                    <TypeAnimation
+                      sequence={[
+                        "Growth",
+                        4000,
+                        "Coding",
+                        4000,
+                        "Career",
+                        4000,
+                        "Skill",
+                        4000,
+                      ]}
+                      wrapper="span"
+                      speed={1}
+                      repeat={Infinity}
+                    />
+                  ) : (
+                    <span>Growth </span>
+                  )}
                   <span className="text-3xl lg:text-6.5xl md:text-5xl sm:text-3xl">
                     Journey
                   </span>
