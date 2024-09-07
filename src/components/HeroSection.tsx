@@ -58,7 +58,7 @@ export const Hero = () => {
       ) : (
         <div className="relative w-full flex">
           <img
-            className="w-13 h-9 -mb-5 -mr-8 absolute right-48 bottom-0 animate-[customBounce_3s_ease-in-out_infinite]"
+            className="w-13 h-9 -mb-5 -mr-9 absolute right-48 bottom-0 animate-[customBounce_3s_ease-in-out_infinite]"
             src="codetag.png"
             alt="codetag"
           />
