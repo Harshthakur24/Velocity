@@ -18,6 +18,22 @@ import {
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
+// Define TypeScript interface for form data
+interface FormData {
+  name: string;
+  profession: string;
+  skills: string;
+  experience: string;
+  college: string;
+  achievements: string;
+  certifications: string;
+  projects: string;
+  email: string;
+  phone: string;
+  linkedin: string;
+  github: string;
+}
+
 const pdfStyles = StyleSheet.create({
   page: { padding: 30, backgroundColor: "#f9f9f9" },
   section: { marginBottom: 15 },
@@ -35,7 +51,7 @@ const pdfStyles = StyleSheet.create({
   line: { borderBottom: "1px solid #ddd", marginVertical: 10 },
 });
 
-const MyDocument = ({ formData }: any) => (
+const MyDocument: React.FC<{ formData: FormData }> = ({ formData }) => (
   <Document>
     <Page size="A4" style={pdfStyles.page}>
       <View style={{ marginBottom: 20 }}>
@@ -85,7 +101,7 @@ const MyDocument = ({ formData }: any) => (
 );
 
 const ResumeBuilder: React.FC = () => {
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState<FormData>({
     name: "",
     profession: "",
     skills: "",
@@ -109,6 +125,10 @@ const ResumeBuilder: React.FC = () => {
     });
   };
 
+  const isFormValid = Object.values(formData).every(
+    (field) => field.trim() !== ""
+  );
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (!isFormValid) {
@@ -117,10 +137,6 @@ const ResumeBuilder: React.FC = () => {
       });
     }
   };
-
-  const isFormValid = Object.values(formData).every(
-    (field) => field.trim() !== ""
-  );
 
   return (
     <div className="p-8 max-w-4xl mx-auto">
@@ -158,7 +174,7 @@ const ResumeBuilder: React.FC = () => {
                 <textarea
                   placeholder={capitalizeFirstLetter(field)}
                   name={field}
-                  value={formData[field]}
+                  value={formData[field as keyof FormData]}
                   onChange={handleChange}
                   className="w-full p-3 border-2 bg-black text-white rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 transition"
                 />
@@ -167,7 +183,7 @@ const ResumeBuilder: React.FC = () => {
                   type={field === "email" ? "email" : "text"}
                   placeholder={capitalizeFirstLetter(field)}
                   name={field}
-                  value={formData[field]}
+                  value={formData[field as keyof FormData]}
                   onChange={handleChange}
                   className="w-full p-3 border-2 bg-black text-white rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 transition"
                 />
@@ -190,7 +206,6 @@ const ResumeBuilder: React.FC = () => {
             <button
               type="submit"
               className="w-auto bg-gray-400 cursor-not-allowed py-3 px-3 rounded-md transition"
-              onClick={handleSubmit}
             >
               Download Your Resume
             </button>
