@@ -4,7 +4,8 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Separator } from "@/components/ui/separator";
+import { Separator } from "@radix-ui/react-separator";
+
 import {
   PlusCircle,
   Trash2,
@@ -177,7 +178,6 @@ export default function ProfessionalDarkResume() {
             />
           </section>
 
-          {/* Work Experience section */}
           <section>
             <h2 className="text-xl font-semibold mb-2">Work Experience</h2>
             {resumeData.experience.map((exp, index) => (
