@@ -63,7 +63,7 @@
     "swr": "^2.2.5",
     "tailwind-merge": "^2.5.3",
     "tailwindcss-animate": "^1.0.7",
-    "zod": "^3.23.8"
+    "zod": "^3.24.3"
   },
   "devDependencies": {
     "@types/multer": "^1.4.11",

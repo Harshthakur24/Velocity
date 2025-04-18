@@ -16,7 +16,7 @@ import {
   FormMessage,
 } from "../components/ui/form";
 import { Input } from "../components/ui/input";
-import { useToast } from "@/components/ui/use-toast";
+import { toast } from "@/components/ui/use-toast";
 
 const contactSchema = z.object({
   name: z.string().min(1, { message: "Name is required." }),
@@ -29,7 +29,6 @@ const contactSchema = z.object({
 type ContactFormValues = z.infer<typeof contactSchema>;
 
 function ContactForm({ userId }: { userId: string }) {
-  const { toast } = useToast();
   const form = useForm<ContactFormValues>({
     resolver: zodResolver(contactSchema),
   });

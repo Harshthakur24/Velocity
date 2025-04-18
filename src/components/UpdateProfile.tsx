@@ -15,7 +15,7 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 
-import { useToast } from "./ui/use-toast";
+import { toast } from "./ui/use-toast";
 
 export function UpdateProfile(userId: { userId: string }) {
   const [name, setName] = useState("Harsh Thakur");
@@ -24,7 +24,6 @@ export function UpdateProfile(userId: { userId: string }) {
   const [currentSemester, setCurrentSemester] = useState("");
   const [branch, setBranch] = useState("");
   const [course, setCourse] = useState("");
-  const { toast } = useToast();
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();

@@ -4,7 +4,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import { createReply } from "@/lib/api";
-import { useToast } from "./ui/use-toast";
+import { toast } from "./ui/use-toast";
 
 export default function ReplyForm({
   discussionId,
@@ -14,7 +14,7 @@ export default function ReplyForm({
   userId: string;
 }) {
   const [answer, setAnswer] = useState("");
-  const { toast } = useToast();
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     try {

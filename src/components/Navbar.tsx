@@ -128,6 +128,13 @@ const Navbar = () => {
                 </Link>
               </NavigationMenuItem>
               <NavigationMenuItem>
+                <Link href="/chat-bot" passHref legacyBehavior>
+                  <NavigationMenuLink className="font-medium text-foreground transition duration-300 hover:text-gray-300">
+                    Chat Bot
+                  </NavigationMenuLink>
+                </Link>
+              </NavigationMenuItem>
+              <NavigationMenuItem>
                 <Link href="/feedback" passHref legacyBehavior>
                   <NavigationMenuLink className="font-medium text-foreground transition duration-300 hover:text-gray-300">
                     Feedback

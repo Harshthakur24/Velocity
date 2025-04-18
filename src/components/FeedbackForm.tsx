@@ -17,7 +17,7 @@ import {
 import { Input } from "../components/ui/input";
 import { Textarea } from "./ui/textarea";
 
-import { useToast } from "@/components/ui/use-toast";
+import { toast } from "@/components/ui/use-toast";
 
 const feedbackSchema = z.object({
   name: z.string().min(1, { message: "Name is required." }),
@@ -33,7 +33,6 @@ const feedbackSchema = z.object({
 type FeedbackFormValues = z.infer<typeof feedbackSchema>;
 
 function FeedbackForm({ userId }: { userId: string }) {
-  const { toast } = useToast();
   const form = useForm<FeedbackFormValues>({
     resolver: zodResolver(feedbackSchema),
   });
